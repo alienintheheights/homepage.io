@@ -1,7 +1,7 @@
 // Until it's in a database, etc.
 export const linkJson = [
     {
-        linkHtml    : 'August 2020: The surprise <a href="https://www.uh.edu/engines/epi3240.htm" target="_new">Engines of Our Ingenuity tribute episode</a> I did for my dad\'s 90th birthday',
+        linkHtml    : 'August 2020: The surprise <a href="https://www.uh.edu/engines/epi3240.htm" target="_new">Engines of Our Ingenuity tribute episode</a> I did for my dad\'s 90th birthday. Episode #3240',
         photoLink   : '<a target="_new" href="https://www.uh.edu/engines/epi3240.htm"><img src="https://photos.smugmug.com/Lexington-Birthday-Weekend/i-6sV2VjG/0/e17c6d26/XL/walking%20on%20Bellefonte-XL.png" alt="walking on Bellefonte"/></a>',
         photoCredit : 'Walking with the Mullaneys through my old neighborhood in Kentucky, 2017.'
     },

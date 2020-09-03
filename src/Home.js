@@ -13,9 +13,10 @@ export default function Home() {
             <Welcome/>
             <About/>
             <MusicLinks number='1' hideTitle={true} />
-            <Bandcamp hideTitle={true} />
-            <VideoLinks featured={true} hideTitle={true}/>
             <PhotoLinks number='1'/>
-         
+            <VideoLinks featured={true} hideTitle={false}/>
+            <div className='fauxmat-pad'></div>
+                   
+            <Bandcamp hideTitle={true} />
         </div>)
 }

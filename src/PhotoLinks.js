@@ -25,7 +25,7 @@ export default function PhotoLinks(props) {
 
     const getPhoto = (value) => {
         return ( 
-            <Col md={8} sm={12} lg={12}>
+            <Col md={8} sm={12} >
                 <div dangerouslySetInnerHTML={{__html: value.photoLink}} />
             </Col> 
         )
@@ -33,10 +33,9 @@ export default function PhotoLinks(props) {
 
     const getTitle = (value) => {
         return ( 
-            <Col md={4} sm={12} lg={12}> 
+            <Col md={4} sm={12}> 
                 <Card.Body className='fauxmat-link-photo-text'>
                     <div dangerouslySetInnerHTML={{__html: value.linkHtml}} />
-                    <div className='fauxmat-pad'></div>
                     <div className='fauxmat-photo-credit'>
                         photo: {value.photoCredit}
                     </div>
