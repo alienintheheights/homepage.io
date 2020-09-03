@@ -10,6 +10,7 @@ import { listFilter } from './utils/listfilter'
 export default function VideoLinks(props) {
     const displayCount = (props && props.number) || 0
     const useFeatured= (props && props.featured) || false
+    const hideTitle = props && props.hideTitle
     return (
         <Grid container spacing={1}>
             {videoJson 
@@ -18,7 +19,7 @@ export default function VideoLinks(props) {
                     return (
                         <Grid  key={`fauxmat-video-${index}`} item xs={12} md={12}>
                             <Card>
-                                <div className='fauxmat-title'>{value.title}</div>
+                                <div className='fauxmat-title'>{!hideTitle && value.title}</div>
                                 <CardContent  className='fauxmat-wide-grid-card'>
                                     <div className='player-wrapper'>
                                         <ReactPlayer 

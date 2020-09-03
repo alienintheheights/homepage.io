@@ -20,7 +20,6 @@
 *:before {
   box-sizing: inherit;
 }
-
 // The base font-size is set at 62.5% for having the convenience
 // of sizing rems in a way that is similar to using px: 1.6rem = 16px
 html {
@@ -49,14 +48,14 @@ img {
     height: auto ;
 }
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  background: $blockQuoteColor;
+  border-left: 10px solid $fadedColor;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
 blockquote:before {
-  color: #ccc;
+  color: $fadedColor;;
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
@@ -65,6 +64,18 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+#fauxmat-root{
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.fauxmat-faded-link{
+  color:$fadedColor;
+}
+.fauxmat-faded-link:hover{
+  color:$textColor;
 }
 .fauxmat-title{
   display: flex;
@@ -104,6 +115,14 @@ blockquote p {
     min-height: 100vh;
     width: 100%;
     height: 100%;
+}
+.fauxmat-jumbo{
+  font-family: 'Helvetica';
+  font-size: 2rem;
+  color: $backgroundColor;
+  background-color: $textColor;
+  padding-left: 0.7rem;
+  text-align: left;
 }
 .fauxmat-insert{
     margin: auto;
@@ -169,12 +188,20 @@ blockquote p {
   .fauxmat-split-smallest{
     font-size: 0.6em;
   }
+  .fauxmat-jumbo{
+    font-size: 2rem;
+  }
+}
+.fauxmat-link-photo-card{
+  max-width: 930px;
+  margin-bottom: 5px;
+}
+.fauxmat-link-photo-text{
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
 }
 .fauxmat-photo-credit{
-  padding-right: 10px;
-  padding-bottom: 5px;
   font-size: 1rem;
-  text-align: right;
 }
 .fauxmat-about-text{
   padding: 10px;
@@ -199,14 +226,6 @@ blockquote p {
 .fauxmat-email{
   font-size: 0.9em;
 }
-.fauxmat-jumbo{
-    font-family: 'Helvetica';
-    font-size: 2rem;
-    color: $backgroundColor;
-    background-color: $textColor;
-    padding: 0.7rem;
-    text-align: left;
-}
 .loading-bar-fixed {
     position: absolute;
     width: 100%;
@@ -214,10 +233,6 @@ blockquote p {
 }
 .fauxmat-pagination-buttons {
     margin: auto;
-}
-.fauxmat-link-photo{
-  max-width: 930px;
-  margin-bottom: 5px;
 }
 .fauxmat-music-photo{
   margin-bottom: 5px;
@@ -237,4 +252,9 @@ blockquote p {
 }
 .social{
   padding-left: 10px;
+}
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 950px;
+  }
 }

@@ -8,10 +8,10 @@ export default function Etc() {
 
     return (
         <div className=''>
-            <div className='fauxmat-jumbo fauxmat-music-photo'>
+            <div className='fauxmat-jumbo fauxmat-link-photo'>
                 Links <small>(with unrelated photos)</small>
             </div>
-            <PhotoLinks/>
+            <PhotoLinks alternate={false}/>
             <div className='fauxmat-disclaimer'>Note: many of these links go to an S3 bucket on Amazon. Don't mind the strange URLs.</div>
         </div>)
 }

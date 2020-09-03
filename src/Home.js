@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Welcome from './Welcome'
 import PhotoLinks from './PhotoLinks'
 import MusicLinks from './MusicLinks'
@@ -11,34 +12,10 @@ export default function Home() {
         <div id='fauxmat-home'>
             <Welcome/>
             <About/>
-            <div id='fauxmat-home-list'>
-                <Bandcamp/>
-
-                <div className='fauxmat-jumbo fauxmat-music-photo'>
-                    <div className='fauxmat-dyna-split'>
-                        <span className='fauxmat-split-largest'>Links and photos</span>  
-                        <span className='fauxmat-split-smallest'><a href='#etc'>more</a></span>
-                    </div>
-                </div>
-                <PhotoLinks number='1'/>
-                
-                <div className='fauxmat-jumbo fauxmat-music-photo'>
-                    <div className='fauxmat-dyna-split'>
-                        <span className='fauxmat-split-largest'>Recent music sets</span>  
-                        <span className='fauxmat-split-smallest'><a href='#music'>more</a></span>
-                    </div>
-                </div>
-                <MusicLinks number='1'/>
-                
-               
-                
-                <div className='fauxmat-jumbo fauxmat-music-photo'>
-                    <div className='fauxmat-dyna-split'>
-                        <span className='fauxmat-split-largest'>Recent video projects</span>  
-                        <span className='fauxmat-split-smallest'><a href='#videos'>more</a></span>
-                    </div>
-                </div>
-                <VideoLinks featured={true}/>
-            </div>
+            <MusicLinks number='1' hideTitle={true} />
+            <Bandcamp hideTitle={true} />
+            <VideoLinks featured={true} hideTitle={true}/>
+            <PhotoLinks number='1'/>
+         
         </div>)
 }

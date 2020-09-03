@@ -21,7 +21,7 @@ export const linkJson = [
         photoCredit : 'Ontario, Canada. June 2017.'
     },
     {
-        linkHtml    : '2009-2011: For a time I wrote <a href="https://www.allaboutjazz.com/php/contributor_articles.php?id=44131" target="_new">Jazz Reviews</a> for AllAboutJazz.com. Fun while it lasted but it had the unwanted side-effect of people  constantly pitching their CDs to me for review. See, I really only wanted to review records I actually liked and didn\t have it in me to pan an artist\'s work. Thus, I\'m no critic. End of hobby.',
+        linkHtml    : '2009-2011: For a time I wrote <a href="https://www.allaboutjazz.com/php/contributor_articles.php?id=44131" target="_new">Jazz Reviews</a> for AllAboutJazz.com. Fun while it lasted but it had too many side-effects.',
         photoLink   : '<a target="_new" href="https://www.allaboutjazz.com/php/contributor_articles.php?id=44131"><img src="https://photos.smugmug.com/AllOfFlickr/i-ZGNVzVc/0/89d5e716/XL/23426408353-XL.jpg" alt="Brazos Bend Park"/></a>',
         photoCredit : 'Brazos Bend Park. 2016'
     }

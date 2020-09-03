@@ -12,7 +12,7 @@ export const videoJson = [
     },
     {
         title    : 'The Birds Of Santa Maria Novella, Gypsy Dream, 2013',
-        linkHtml : 'https://youtu.be/EcSVfmnVwmg?t=181',
+        linkHtml : 'https://youtu.be/EcSVfmnVwmg?t=189',
         featured : 1
     },
     {

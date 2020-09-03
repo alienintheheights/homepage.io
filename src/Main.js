@@ -15,8 +15,8 @@ import Footer from './Footer'
 
 export default function Main() {
     return (
-        <Container>
-            <div className='fauxmat-home'>
+        <div id='fauxmat-root'>
+            <Container >
                 <NavHome/>
                 <HashRouter basename="/">
                     <Switch>
@@ -30,8 +30,8 @@ export default function Main() {
                         <Route path='/about' component={About}/> 
                     </Switch>
                 </HashRouter>
-            </div>
-            <Footer/>
-        </Container>
+                <Footer/>
+            </Container>
+        </div>
     )
 }
