@@ -13,6 +13,7 @@ export default function Home() {
             <About/>
             <div id='fauxmat-home-list'>
                 <Bandcamp/>
+
                 <div className='fauxmat-jumbo fauxmat-music-photo'>
                     <div className='fauxmat-dyna-split'>
                         <span className='fauxmat-split-largest'>Links and photos</span>  
@@ -20,6 +21,7 @@ export default function Home() {
                     </div>
                 </div>
                 <PhotoLinks number='1'/>
+                
                 <div className='fauxmat-jumbo fauxmat-music-photo'>
                     <div className='fauxmat-dyna-split'>
                         <span className='fauxmat-split-largest'>Recent music sets</span>  
@@ -27,13 +29,16 @@ export default function Home() {
                     </div>
                 </div>
                 <MusicLinks number='1'/>
+                
+               
+                
                 <div className='fauxmat-jumbo fauxmat-music-photo'>
                     <div className='fauxmat-dyna-split'>
                         <span className='fauxmat-split-largest'>Recent video projects</span>  
                         <span className='fauxmat-split-smallest'><a href='#videos'>more</a></span>
                     </div>
                 </div>
-                <VideoLinks number='1'/>
+                <VideoLinks featured={true}/>
             </div>
         </div>)
 }

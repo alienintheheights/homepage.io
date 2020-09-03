@@ -1,13 +1,15 @@
 import React from 'react'
 import {Card} from 'react-bootstrap'
 import { linkJson } from './data/links'
+import { listFilter } from './utils/listfilter'
 
 export default function PhotoLinks(props) {
     const displayCount = (props && props.number) || 0
+    const useFeatured= (props && props.featured) || false
     return (
         <div>
-            {linkJson 
-            && linkJson.filter( (value, index) => (!displayCount || index < displayCount))
+            {linkJson &&
+            listFilter(linkJson, useFeatured, displayCount)
             .map( (value, index) => {
                 return (
                     <Card key={`fauxmat-links-${index}`} className='fauxmat-link-photo'>

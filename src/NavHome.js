@@ -14,7 +14,6 @@ export default function NavHome() {
                         <Nav.Link className='fauxmat-navspacing' href="#videos">Videos</Nav.Link>
                         <Nav.Link className='fauxmat-navspacing' href="#posts">Blog</Nav.Link>
                         <Nav.Link className='fauxmat-navspacing' href="#etc">Etc</Nav.Link>
-                        <Nav.Link className='fauxmat-navspacing' href="#about">About</Nav.Link>
                     </Nav>
                 </span>
                 <span id='fauxmat-nav-social'><Social/></span>
