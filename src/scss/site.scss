@@ -1,0 +1,240 @@
+:root {
+  box-sizing: border-box;
+  font-size: 0.75em;
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 0.875em;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1em;
+  }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+// The base font-size is set at 62.5% for having the convenience
+// of sizing rems in a way that is similar to using px: 1.6rem = 16px
+html {
+  box-sizing: border-box;
+  height: 100%;
+  body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.2rem;
+    height: 100%;
+    margin: 0;    
+    box-sizing:border-box;
+    border-radius:0px;
+    box-shadow:none;
+    background-repeat:no-repeat;
+    [tabindex="-1"]:focus {
+      outline: 0 !important;
+    }    
+  }
+  #root{
+    height: 100%;   
+  }
+}
+img {
+    width: auto;
+    max-width: 100% ;
+    height: auto ;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+.fauxmat-title{
+  display: flex;
+  color:$textColor;
+  background-color: $fadedColor;
+  font-size: 1.6rem;
+  padding: 0 0 0 10px;
+}
+.fauxmat-home{
+  min-height: calc(100vh - 75px);
+}
+.fauxmat-footer{
+    width: 100%;
+    max-width: 900px;
+    height: 30px;  
+    padding: 0px;
+    margin: 10px 0;
+    display: flex;
+}
+.bg-light {
+    background-color: $backgroundColor!important;
+}
+.fauxmat-cover {
+    background-image: url('/img/turntable.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+.fauxmat-math-cover {
+    background-image: url('/img/laplace.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+.fauxmat-insert{
+    margin: auto;
+    width: 80%;
+    margin-top: 5%;
+}
+.fauxmat-welcome-text{
+    background-color: $backgroundColor;
+    color: $textColor;
+    font-size: 1.2rem;
+    max-width: 500px;
+    border: 1px solid  $fadedColor;
+}
+.fauxmat-card-photo{
+  max-width: 500px;
+}
+#fauxmat-navcenter{
+  /*max-width: 950px;*/
+}
+.fauxmat-navspacing{
+  margin-right: 15px;
+}
+#fauxmat-nav-social{
+  padding-left: 0px;
+}
+.fauxmat-dyna-split{
+  display: flex;
+  width: 100%;
+}
+.fauxmat-split-larger{
+  width: 60%;
+}
+.fauxmat-split-smaller{
+  width: 40%;
+}
+.fauxmat-split-largest{
+  width: 90%;
+}
+.fauxmat-split-smallest{
+  width: 10%;
+}
+@media only screen and (max-width: 760px) {
+  .fauxmat-card-photo{
+    width: 100%;
+  }
+  .fauxmat-welcome-text{
+    width: 100%;
+  }
+  .fauxmat-navspacing{
+    margin-right: 0px;
+  }
+  #fauxmat-nav-social{
+    padding-left: 0;
+    max-width: 0;
+    display: none;
+  }
+  .fauxmat-dyna-split{
+    display: block;
+  }
+  .fauxmat-music-photo > .fauxmat-dyna-split{
+    display: flex;
+  }
+  .fauxmat-split-smallest{
+    font-size: 0.6em;
+  }
+}
+.fauxmat-photo-credit{
+  padding-right: 10px;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  text-align: right;
+}
+.fauxmat-about-text{
+  padding: 10px;
+  font-size: 1em;
+}
+.fauxmat-wide-grid-card{
+  padding: 0!important;
+}
+.fauxmat-pad{
+    padding: 10px;
+}
+.fauxmat-clear{
+    clear: both;
+}
+.fauxmat-center{
+  width: 80%;
+  margin: auto;
+}
+.fauxmat-disclaimer{
+    font-size: 0.7rem;
+}
+.fauxmat-email{
+  font-size: 0.9em;
+}
+.fauxmat-jumbo{
+    font-family: 'Helvetica';
+    font-size: 2rem;
+    color: $backgroundColor;
+    background-color: $textColor;
+    padding: 0.7rem;
+    text-align: left;
+}
+.loading-bar-fixed {
+    position: absolute;
+    width: 100%;
+    z-index:999; 
+}
+.fauxmat-pagination-buttons {
+    margin: auto;
+}
+.fauxmat-link-photo{
+  max-width: 930px;
+  margin-bottom: 5px;
+}
+.fauxmat-music-photo{
+  margin-bottom: 5px;
+  .card-body{
+    padding: 0;
+    margin: 0;
+  }
+}
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.social{
+  padding-left: 10px;
+}
