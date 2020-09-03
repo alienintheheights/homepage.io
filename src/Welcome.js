@@ -18,7 +18,7 @@ function getRandomGreeting(index) {
 export default function Welcome() {
     const [random1, random2] = getTwoRandomNumbers()
     return (
-        <div className='fauxmat-jumbo fauxmat-link-photo'>
+        <div className='fauxmat-jumbo'>
                 Welcome <small className='fauxmat-disclaimer'>{getRandomGreeting(random1)}, {getRandomGreeting(random2)}</small>
         </div>
     )
