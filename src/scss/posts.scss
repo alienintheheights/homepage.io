@@ -31,8 +31,11 @@
 #fauxmat-post-inner{
    width: 100%;
 }
-#fauxmat-post-masthead {
-    padding: 10px;
+.fauxmat-post-masthead {
+    flex: 0 0 50%;
+    background-color: $textColor;
+    color: $backgroundColor;
+    margin: 0;
 }
 #fauxmat-post-title {
     font-size: 2.5rem;
@@ -42,13 +45,12 @@
     padding-bottom: 2px;
 }
 .fauxmat-post-title-large{
-    color: $backgroundColor;
     padding: 0 10px;
     font-size: 1.3rem;
 }
 .fauxmat-post-date {
     text-align: right;
-    color: $backgroundColor;
+    color: $textColor;
     padding: 0 10px; 
     font-size: 0.9rem;
 }
@@ -56,7 +58,6 @@
     font-size: 0.9rem;
 }
 #fauxmat-post-content-wrapper{
-    background-color: $backgroundColor;
 }
 #fauxmat-post-content {
     width: 100%;

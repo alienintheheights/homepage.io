@@ -107,7 +107,7 @@ export default function Posts() {
                             key={`post-${index}`}
                             style={divStyle}>
                             <Row>
-                                <Col sm={9}>
+                                <Col sm={9} className='fauxmat-post-masthead'>
                                     <div className='fauxmat-post-title-large' dangerouslySetInnerHTML={{__html: post.title.rendered}} />
                                     <span className='fauxmat-post-date'>
                                         <Moment format='MMMM D, YYYY'>{post.date}</Moment>

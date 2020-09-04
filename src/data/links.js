@@ -3,7 +3,7 @@ export const linkJson = [
     {
         linkHtml    : 'August 2020: The surprise <a href="https://www.uh.edu/engines/epi3240.htm" target="_new">Engines of Our Ingenuity tribute episode</a> I did for my dad\'s 90th birthday. Episode #3240',
         photoLink   : '<a target="_new" href="https://www.uh.edu/engines/epi3240.htm"><img src="https://photos.smugmug.com/Lexington-Birthday-Weekend/i-6sV2VjG/0/e17c6d26/XL/walking%20on%20Bellefonte-XL.png" alt="walking on Bellefonte"/></a>',
-        photoCredit : 'Walking with the Mullaneys through my old neighborhood in Kentucky, 2017.'
+        photoCredit : 'Walking with the Mullaneys through my old neighborhood in Kentucky, November 2018.'
     },
     {
         linkHtml    : 'Jan 2020: <a href="https://s3-us-west-2.amazonaws.com/www.andrewlienhard.com/presentations/uhmathsoftwaretalk2020.pdf" target="_new">A lecture</a> I gave to the math graduate students at U of H on the transition from math student to software engineer.',
@@ -23,7 +23,7 @@ export const linkJson = [
     {
         linkHtml    : '2009-2011: For a time I wrote <a href="https://www.allaboutjazz.com/php/contributor_articles.php?id=44131" target="_new">Jazz Reviews</a> for AllAboutJazz.com. Fun while it lasted but it had too many side-effects.',
         photoLink   : '<a target="_new" href="https://www.allaboutjazz.com/php/contributor_articles.php?id=44131"><img src="https://photos.smugmug.com/AllOfFlickr/i-ZGNVzVc/0/89d5e716/XL/23426408353-XL.jpg" alt="Brazos Bend Park"/></a>',
-        photoCredit : 'Brazos Bend Park. 2016'
+        photoCredit : 'Brazos Bend Park. December 2016'
     }
 
 ]

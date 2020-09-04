@@ -29,7 +29,7 @@ export default function Post(props) {
 
     const getTitle = (currentPost) => {
         return (
-            <div id='fauxmat-post-masthead'>
+            <div className='fauxmat-post-masthead'>
                 <div id='fauxmat-post-title' 
                     dangerouslySetInnerHTML={{__html: currentPost.title.rendered}} />
                 <div id='fauxmat-post-author'>
@@ -46,7 +46,7 @@ export default function Post(props) {
             {isLoading &&  <LoadingIndicator/>}
             {post && post.title && ( 
                 <div id='fauxmat-post-inner'>
-                    <div className='fauxmat-title'>
+                    <div className='fauxmat-post-title-wrapper'>
                         <span>{getTitle(post)}</span>
                         <span>{!isUrl && <a href={`#/post/${postId}`}>Open full page</a>}</span>
                     </div>
