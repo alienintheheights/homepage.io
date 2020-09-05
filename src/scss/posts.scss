@@ -2,6 +2,22 @@
 #fauxmat-postgrid {
     margin: auto;
     height: 100%;
+    position: relative;
+    border-bottom: 1px solid $darkerBackground;
+}
+.fauxmat-pagination-buttons {
+    width: 20%;
+    margin: auto;
+    padding: 10px 0;
+}
+@media only screen and (max-width: 760px) {
+    .fauxmat-pagination-buttons {
+        width: 40%;
+        padding-left: 20px;
+    }
+}
+.fauxmat-pagination-button{
+    background-color: black;
 }
 .fauxmat-grid-card{
     height: 400px;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import { Button, Row, Col } from 'react-bootstrap'
 //import { debounce } from 'lodash'
@@ -11,7 +11,13 @@ import { WP_POSTS_URL, WP_PER_PAGE } from './constants'
 const cache = []
 export default function Posts() {
 
-   
+    const postRef = useRef(null)
+    const scrollToTop = () => {
+        postRef.current.scrollIntoView({
+            behavior : 'smooth'
+        })
+    }
+
     const handleOpen = (id) => {
         window.location='/#/post/' + id
     }
@@ -83,15 +89,13 @@ export default function Posts() {
     const renderPagination = () => {
         return (
             <div className='fauxmat-pagination-buttons'>
-                {pageNumber > 1 && 
-              <Button disabled={isLoading} color="secondary" onClick={() => setPageNumber(pageNumber*1 - 1)}>Less</Button>}
-                {!noMoreData && <Button disabled={isLoading} color="secondary" onClick={() => setPageNumber(pageNumber*1 + 1)}>More</Button>}
+                {!noMoreData && <Button disabled={isLoading} className='fauxmat-pagination-button' onClick={() => setPageNumber(pageNumber*1 + 1)}>Load More Posts</Button>}
             </div>
         )
     }
 
     return (
-        <div id='fauxmat-postgrid' className='fauxmat'>
+        <div ref={postRef} id='fauxmat-postgrid' className='fauxmat'>
             <div>
                 {isLoading &&  <LoadingIndicator/>}
                 <Row>
@@ -114,8 +118,8 @@ export default function Posts() {
                             </Col> 
                         )})}
                 </Row>    
-                {renderPagination()}
             </div>
+            {renderPagination()}
         </div>
     )
 }

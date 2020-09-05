@@ -49,7 +49,7 @@ export default function Post(props) {
             behavior : 'smooth'
         })
     }
-    const postRef = React.useRef(null)
+    const postRef = useRef(null)
     const scrollToTop = () => {
         postRef.current.scrollIntoView({
             behavior : 'smooth'
@@ -149,8 +149,7 @@ export default function Post(props) {
                                 })}
                             </div>
                         </div>}
-                        <div  id='fauxmat-post-comment-teaser' onClick={() => scrollToTop()}>Top</div>
-       
+                        <div id='fauxmat-post-comment-teaser' onClick={() => scrollToTop()}>Top</div>
                     </div>
                 </div>}
         </div>
