@@ -5,6 +5,7 @@ export const WP_PER_PAGE = 20
 export const WP_BASE_URL = 'https://www.andrewlienhard.io/press/wp-json/wp/v2'
 export const WP_POSTS_URL =  WP_BASE_URL + '/posts?_embed&per_page=' + WP_PER_PAGE + '&page='
 export const WP_POST_URL =  WP_BASE_URL + '/posts/'
+export const WP_COMMENTS_URL = WP_BASE_URL + '/comments?per_page=100&post='
 
 export const HELLOS = {
     'Chinese'    : '你好',
