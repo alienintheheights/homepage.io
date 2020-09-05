@@ -78,7 +78,7 @@ export default function Post(props) {
                     {(comments.length>0) && (<span>
                         <div onClick={() => scrollToBottom()}>Comments ({comments.length})</div>
                     </span>)}
-                    <span>last updated <Moment format='MMMM D, YYYY' date={post.modified}/></span>
+                    {(post.modified !== post.date) && <span>last updated <Moment format='MMMM D, YYYY' date={post.modified}/></span>}
                 </div>
                
             </div>
@@ -101,7 +101,6 @@ export default function Post(props) {
                     {thread.author_url && <a href={thread.author_url}><img className='fauxmat-post-author-avatar' alt='avatar' src={thread.author_avatar_urls[48]}/></a>}
                     {!thread.author_url && <img className='fauxmat-post-author-avatar' alt='avatar' src={thread.author_avatar_urls[48]}/>}
                     {thread.author_name}
-                    
                 </div>
                 <div className='fauxmat-post-date'>
                     <Moment format='MMMM D, YYYY hh:mm:ss A' date={thread.date}/>
@@ -111,7 +110,8 @@ export default function Post(props) {
         ) 
     }
                 
-    const commentMessage = comments.length + ' Comment' + ((comments.length >1)? 's': '') 
+    const singleComment = comments.length > 1
+    const commentMessage = (!singleComment ? '' : comments.length) + ' Comment' + (singleComment ? 's': '') 
     return (
         <div id='fauxmat-post'>
             {isLoading &&  <LoadingIndicator/>}
@@ -125,7 +125,7 @@ export default function Post(props) {
                         <div id='fauxmat-post-content' dangerouslySetInnerHTML={{__html: post.content.rendered}}/>
                      
                         {comments.length>0 && <div ref={commentRef}  id='fauxmat-post-comments-wrapper'>
-                            <h2>{ comments.length && commentMessage}</h2>
+                            <h2>{comments.length && commentMessage}</h2>
                             <div id='fauxmat-post-comments-replies'>
                                 {comments.filter(c => c.parent === 0).map((thread, index) => {
                                     const childThreads = comments.filter(c => c.parent === thread.id)

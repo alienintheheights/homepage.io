@@ -99,7 +99,7 @@ export default function Posts() {
                         const divStyle = {
                             backgroundRepeat : 'no-repeat',
                             backgroundSize   : 'cover',
-                            backgroundImage  : 'url(' + post['_embedded']['wp:featuredmedia'][0].source_url + ')'
+                            backgroundImage  : 'url(' + (post['_embedded']['wp:featuredmedia'] ? post['_embedded']['wp:featuredmedia'][0].source_url : '') + ')'
                         }
                         return (
                             <Col sm={12} md={6} 
