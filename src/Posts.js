@@ -104,7 +104,6 @@ export default function Posts() {
                         }
                         return (
                             <Col sm={12} md={6} 
-                                className='fauxmat-grid-card'
                                 onClick={() => handleOpen(post.id)} 
                                 className='fauxmat-grid-card' 
                                 key={`post-${index}`}

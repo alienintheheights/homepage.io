@@ -1,4 +1,4 @@
-
+/** Posts.js **/
 #fauxmat-postgrid {
     margin: auto;
     height: 100%;
@@ -14,25 +14,6 @@
         width: 400px;
     }
 }
-.fauxmat-grid-card-title{
-    padding: 10px;
-}
-.fauxmat-post-grid-pic{
-    clear: both;
-    max-width: 300px;
-    height: 300px;
-    max-height: 300px;
-}
-#fauxmat-post{
-    width: 100%;
-    text-align: left;
-}
-#fauxmat-post-inner{
-   width: 100%;
-}
-.fauxmat-post-title-wrapper{
-    padding-top: 5px;
-}
 .fauxmat-post-masthead-list {
     background-color: $textColor;
     color: $backgroundColor;
@@ -42,48 +23,72 @@
     font-size: 1.3rem;
     padding: 10px;
 }
+.fauxmat-post-date-large {
+    font-size: 0.9rem;
+}
+#fauxmat-post{
+    width: 100%;
+    text-align: left;
+}
+
+/** Post.js **/
+#fauxmat-post-inner{
+   width: 100%;
+   padding: 2px 0px;
+}
+.fauxmat-post-title-wrapper{
+    display: flex;
+}
 .fauxmat-post-masthead {
     flex: 0 0 50%;
-    margin: 0;
-    border-bottom: 1px solid $fadedColor;
+    margin: 0 20px;
+    border-top: 1px solid $fadedColor;
 }
 #fauxmat-post-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     line-height: 2.8rem;
     position: relative;
     font-weight: bold;
     padding-bottom: 2px;
 }
-.fauxmat-post-date {
-    display: flex;
-    color: $fadedColor;
-    padding: 0 10px; 
-    font-size: 0.9rem;
-}
-.fauxmat-post-date-large {
-    font-size: 0.9rem;
-}
-#fauxmat-post-content-wrapper{
-    padding-top: 10px;
-}
-#fauxmat-post-content {
-    width: 100%;
-    padding: 0 10px;
-    background-color: $backgroundColor;
-    color: black;
-}
-#fauxmat-post-content-full {
-    margin: 10px;
-    font-size: 1.5em;
-    color: $backgroundColor;
-    text-align: left;
-}
 #fauxmat-post-author {
     font-size: 0.7rem;
 }
+.fauxmat-post-date {
+    display: flex;
+    color: $dateColor;
+    font-size: 0.9rem;
+}
+
+#fauxmat-post-content-wrapper{
+    margin: 2px 15px;
+}
+#fauxmat-post-masthead-image{
+    width: 100%;
+    height: 350px;
+}
+@media only screen and (max-width: 760px) {
+    #fauxmat-post-masthead-image{
+        height: 300px;
+        width: 300px;
+    }
+}
+#fauxmat-post-content {
+    width: 100%;
+    background-color: $backgroundColor;
+    color: black;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    padding: 10px 0 0 10px;
+    img {
+        width: auto;
+        max-width: 80%;
+        height: auto;
+    }
+}
+
+
+
 span:first-of-type {
     flex: 1;
-}
-.fauxmat-grid-wrapper{
-    background-color: $textColor;
 }

@@ -34,14 +34,21 @@ export default function Post(props) {
                     dangerouslySetInnerHTML={{__html: currentPost.title.rendered}} />
                 <div id='fauxmat-post-author'>
                     <div className='fauxmat-post-date'>
-                        <span>published on <Moment format='MMMM D, YYYY'>{post.date}</Moment></span>
-                        <span>last updated <Moment format='MMMM D, YYYY' date={post.modified}/></span>
+                        <span><Moment format='MMMM D, YYYY'>{post.date}</Moment></span>
                     </div>
                 </div>
             </div>
         ) 
     }
 
+    const getMastImage = (currentPost) => {
+        return {
+            backgroundRepeat   : 'no-repeat',
+            backgroundSize     : 'cover',
+            backgroundPosition : 'center',
+            backgroundImage    : 'url(' + currentPost['_embedded']['wp:featuredmedia'][0].source_url + ')'
+        }
+    }
     return (
         <div id='fauxmat-post'>
             {isLoading &&  <LoadingIndicator/>}
@@ -52,6 +59,7 @@ export default function Post(props) {
                         <span>{!isUrl && <a href={`#/post/${postId}`}>Open full page</a>}</span>
                     </div>
                     <div id='fauxmat-post-content-wrapper'>
+                        <div id='fauxmat-post-masthead-image' style={getMastImage(post)} />
                         <div id='fauxmat-post-content' dangerouslySetInnerHTML={{__html: post.content.rendered}}/>
                         <div className='fauxmat-post-date'>
                             <span>last updated <Moment format='MMMM D, YYYY' date={post.modified}/></span>
