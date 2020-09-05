@@ -95,30 +95,27 @@ export default function Posts() {
         <div id='fauxmat-postgrid' className='fauxmat'>
             <div>
                 {isLoading &&  <LoadingIndicator/>}
-                {posts && posts.map((post, index) => {
-                    const divStyle = {
-                        backgroundRepeat : 'no-repeat',
-                        backgroundSize   : 'cover',
-                        backgroundImage  : 'url(' + post['_embedded']['wp:featuredmedia'][0].source_url + ')'
-                    }
-                    return (
-                        <div onClick={() => handleOpen(post.id)} 
-                            className='fauxmat-grid-card' 
-                            key={`post-${index}`}
-                            style={divStyle}>
-                            <Row>
-                                <Col sm={9} className='fauxmat-post-masthead'>
+                <Row>
+                    {posts && posts.map((post, index) => {
+                        const divStyle = {
+                            backgroundRepeat : 'no-repeat',
+                            backgroundSize   : 'cover',
+                            backgroundImage  : 'url(' + post['_embedded']['wp:featuredmedia'][0].source_url + ')'
+                        }
+                        return (
+                            <Col sm={12} md={6} 
+                                className='fauxmat-grid-card'
+                                onClick={() => handleOpen(post.id)} 
+                                className='fauxmat-grid-card' 
+                                key={`post-${index}`}
+                                style={divStyle}
+                            >
+                                <div className='fauxmat-post-masthead-list'>
                                     <div className='fauxmat-post-title-large' dangerouslySetInnerHTML={{__html: post.title.rendered}} />
-                                    <span className='fauxmat-post-date'>
-                                        <Moment format='MMMM D, YYYY'>{post.date}</Moment>
-                                    </span>
-                                </Col>   
-                                <Col sm={3}>
-                                   
-                                </Col>
-                            </Row>    
-                        </div>
-                    )})}
+                                </div>
+                            </Col> 
+                        )})}
+                </Row>    
                 {renderPagination()}
             </div>
         </div>

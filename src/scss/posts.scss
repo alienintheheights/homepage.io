@@ -6,7 +6,6 @@
 .fauxmat-grid-card{
     height: 400px;
     width: 100%;
-    margin: auto;
     font-size: 1.1rem;
 }
 @media only screen and (max-width: 760px) {
@@ -31,11 +30,22 @@
 #fauxmat-post-inner{
    width: 100%;
 }
-.fauxmat-post-masthead {
-    flex: 0 0 50%;
+.fauxmat-post-title-wrapper{
+    padding-top: 5px;
+}
+.fauxmat-post-masthead-list {
     background-color: $textColor;
     color: $backgroundColor;
     margin: 0;
+}
+.fauxmat-post-title-large{
+    font-size: 1.3rem;
+    padding: 10px;
+}
+.fauxmat-post-masthead {
+    flex: 0 0 50%;
+    margin: 0;
+    border-bottom: 1px solid $fadedColor;
 }
 #fauxmat-post-title {
     font-size: 2.5rem;
@@ -44,13 +54,9 @@
     font-weight: bold;
     padding-bottom: 2px;
 }
-.fauxmat-post-title-large{
-    padding: 0 10px;
-    font-size: 1.3rem;
-}
 .fauxmat-post-date {
-    text-align: right;
-    color: $textColor;
+    display: flex;
+    color: $fadedColor;
     padding: 0 10px; 
     font-size: 0.9rem;
 }
@@ -58,11 +64,11 @@
     font-size: 0.9rem;
 }
 #fauxmat-post-content-wrapper{
+    padding-top: 10px;
 }
 #fauxmat-post-content {
     width: 100%;
     padding: 0 10px;
-    font-size: calc(100% + 0.2rem);
     background-color: $backgroundColor;
     color: black;
 }

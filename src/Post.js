@@ -34,7 +34,8 @@ export default function Post(props) {
                     dangerouslySetInnerHTML={{__html: currentPost.title.rendered}} />
                 <div id='fauxmat-post-author'>
                     <div className='fauxmat-post-date'>
-                  first published <Moment format='MMMM D, YYYY'>{currentPost.date}</Moment>
+                        <span>published on <Moment format='MMMM D, YYYY'>{post.date}</Moment></span>
+                        <span>last updated <Moment format='MMMM D, YYYY' date={post.modified}/></span>
                     </div>
                 </div>
             </div>
@@ -53,7 +54,7 @@ export default function Post(props) {
                     <div id='fauxmat-post-content-wrapper'>
                         <div id='fauxmat-post-content' dangerouslySetInnerHTML={{__html: post.content.rendered}}/>
                         <div className='fauxmat-post-date'>
-                      last updated <Moment date={post.modified} />
+                            <span>last updated <Moment format='MMMM D, YYYY' date={post.modified}/></span>
                         </div>
                     </div>
                 </div>)}
