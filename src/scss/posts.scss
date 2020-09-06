@@ -107,7 +107,7 @@ img.fauxmat-post-author-avatar {
     padding: 10px 0;
     img {
         width: auto;
-        max-width: 80%;
+        max-height: 700px;
         height: auto;
     }
 }
@@ -147,4 +147,20 @@ img.fauxmat-post-author-avatar {
 
 span:first-of-type {
     flex: 1;
+}
+
+/** overrides */
+figure {
+    padding: 4px;
+    margin: auto;
+}
+  
+figcaption {
+    font-style: italic;
+    text-align: left;
+    padding-bottom: 2px;
+}
+
+wp-block-image {
+    margin: 0;
 }
