@@ -8,12 +8,12 @@ export const videoJson = [
     {
         title    : 'Djelem, Djelem: Zeljko Pavlovic with Kelton Washington, 2020',
         linkHtml : 'https://www.youtube.com/watch?v=kcK_XjaEN4M',
-        featured : 0
+        featured : 1
     },
     {
         title    : 'The Birds Of Santa Maria Novella, Gypsy Dream CD, 2013',
         linkHtml : 'https://youtu.be/EcSVfmnVwmg?t=189',
-        featured : 1
+        featured : 0
     },
     {
         title    : 'Ten Very Short Pieces for Piano, 2010',
@@ -43,11 +43,6 @@ export const videoJson = [
     {
         title    : 'Ambient Improv, 2020',
         linkHtml : 'https://www.youtube.com/watch?v=mbbj03hNPYY',
-        featured : 0
-    },
-    {
-        title    : 'Mood III',
-        linkHtml : 'https://www.youtube.com/watch?v=Qh49oEZ1Dys',
         featured : 0
     }
 ]
