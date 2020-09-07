@@ -129,6 +129,15 @@ blockquote p {
     width: 80%;
     margin-top: 5%;
 }
+.fauxmat-breadcrumb{
+  a {
+    color: $darkerBackground;
+  }
+  a:hover {
+    color: $dateColor;
+  }
+  padding-bottom: 5px;
+}
 .fauxmat-welcome-text{
     background-color: $backgroundColor;
     color: $textColor;

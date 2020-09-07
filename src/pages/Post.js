@@ -60,9 +60,18 @@ export default function Post(props) {
         })
     }
 
+    const getBreadcrumb = () => {
+        return ( 
+            <div className='fauxmat-breadcrumb'>
+                <a href='/#'>/home</a>
+                <a href={`#/blog/${props.match.params.fp || 1}`}>/blog</a>
+            </div>)
+    }
+
     const getTitle = (currentPost) => {
         return (
             <div ref={postRef} className='fauxmat-post-masthead'>
+                {getBreadcrumb()}
                 <div id='fauxmat-post-title' 
                     dangerouslySetInnerHTML={{__html: currentPost.title.rendered}} />
                 <div id='fauxmat-post-masthead-image' style={getMastImage(currentPost)} />         

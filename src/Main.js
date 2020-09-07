@@ -21,9 +21,9 @@ export default function Main() {
                 <HashRouter basename="/">
                     <Switch>
                         <Route exact path='/' component={Home}/>
-                        <Route exact path='/posts' component={Posts}/>
+                        <Route path='/blog/:lp?' component={Posts}/>
                         <Route exact path='/home' component={Home}/>
-                        <Route exact path='/post/:id' component={Post}/> 
+                        <Route path='/post/:id/:fp?' component={Post}/> 
                         <Route exact path='/etc' component={Etc}/> 
                         <Route exact path='/music' component={Music}/> 
                         <Route exact path='/videos' component={Video}/> 

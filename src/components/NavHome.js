@@ -10,9 +10,9 @@ export default function NavHome() {
                 <span>
                     <Nav className="mr-auto">
                         <Nav.Link className='fauxmat-navspacing' href="/#">Home</Nav.Link>
+                        <Nav.Link className='fauxmat-navspacing' href="#blog">Blog</Nav.Link>
                         <Nav.Link className='fauxmat-navspacing' href="#music">Music</Nav.Link> 
                         <Nav.Link className='fauxmat-navspacing' href="#videos">Videos</Nav.Link>
-                        <Nav.Link className='fauxmat-navspacing' href="#posts">Blog</Nav.Link>
                         <Nav.Link className='fauxmat-navspacing' href="#etc">Etc</Nav.Link>
                     </Nav>
                 </span>
