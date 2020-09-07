@@ -3,31 +3,31 @@ import {Container} from 'react-bootstrap'
 
 import { HashRouter, Route, Switch } from 'react-router-dom'
 
-import NavHome from './NavHome'
-import Posts from './Posts'
-import Post from './Post'
-import Etc from './Etc'
-import Music from './Music'
-import Home from './Home'
-import Video from './Video'
-import About from './About'
-import Footer from './Footer'
+import NavHome from './components/NavHome'
+import Posts from './pages/Posts'
+import Post from './pages/Post'
+import Etc from './pages/Etc'
+import Music from './pages/Music'
+import Home from './pages/Home'
+import Video from './pages/Video'
+import About from './components/About'
+import Footer from './components/Footer'
 
 export default function Main() {
     return (
         <div id='fauxmat-root'>
-            <Container >
+            <Container>
                 <NavHome/>
                 <HashRouter basename="/">
                     <Switch>
                         <Route exact path='/' component={Home}/>
-                        <Route path='/posts' component={Posts}/>
-                        <Route path='/home' component={Home}/>
-                        <Route path='/post/:id' component={Post}/> 
-                        <Route path='/etc' component={Etc}/> 
-                        <Route path='/music' component={Music}/> 
-                        <Route path='/videos' component={Video}/> 
-                        <Route path='/about' component={About}/> 
+                        <Route exact path='/posts' component={Posts}/>
+                        <Route exact path='/home' component={Home}/>
+                        <Route exact path='/post/:id' component={Post}/> 
+                        <Route exact path='/etc' component={Etc}/> 
+                        <Route exact path='/music' component={Music}/> 
+                        <Route exact path='/videos' component={Video}/> 
+                        <Route exact path='/about' component={About}/> 
                     </Switch>
                 </HashRouter>
                 <Footer/>

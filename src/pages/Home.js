@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Welcome from './Welcome'
-import PhotoLinks from './PhotoLinks'
-import MusicLinks from './MusicLinks'
-import VideoLinks from './VideoLinks'
-import Bandcamp from './Bandcamp'
-import About from './About'
+import Welcome from '../components/Welcome'
+import PhotoLinks from '../components/PhotoLinks'
+import MusicLinks from '../components/MusicLinks'
+import VideoLinks from '../components/VideoLinks'
+import Bandcamp from '../components/Bandcamp'
+import About from '../components/About'
 
 export default function Home() {
     return (

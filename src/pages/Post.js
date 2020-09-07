@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Moment from 'react-moment'
 import 'moment-timezone'
-import LoadingIndicator from './LoadingIndicator'
-import { WP_POST_URL, WP_COMMENTS_URL } from './constants'
+import LoadingIndicator from '../components/LoadingIndicator'
+import { WP_POST_URL, WP_COMMENTS_URL } from '../constants'
 
 import { sortBy } from 'lodash'
 
@@ -18,6 +18,7 @@ export default function Post(props) {
  
     useEffect(() => {
         if (cache[postId]) {
+            console.log('cache hit!!')
             setPost(cache[postId])
             return
         }

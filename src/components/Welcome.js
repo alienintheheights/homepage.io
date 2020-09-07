@@ -1,5 +1,5 @@
 import React from 'react'
-import { HELLOS } from './constants'
+import { HELLOS } from '../constants'
 
 function getTwoRandomNumbers() {
     const entries = Object.entries(HELLOS)

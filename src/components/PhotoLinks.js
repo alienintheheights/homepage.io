@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import {Card, Row, Col} from 'react-bootstrap'
 
-import { linkJson } from './data/links'
-import { listFilter } from './utils/listfilter'
-import { MOBILE_MAX } from './constants'
+import { linkJson } from '../data/links'
+import { listFilter } from '../utils/listfilter'
+import { MOBILE_MAX } from '../constants'
 
 export default function PhotoLinks(props) {
     const displayCount = (props && props.number) || 0

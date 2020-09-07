@@ -1,5 +1,5 @@
 import React, {  useEffect }  from 'react'
-import PhotoLinks from './PhotoLinks'
+import PhotoLinks from '../components/PhotoLinks'
 
 export default function Etc() {
     useEffect(() => {

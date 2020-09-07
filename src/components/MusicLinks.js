@@ -1,8 +1,8 @@
 import React from 'react'
 import {Card, Row, Col} from 'react-bootstrap'
 
-import { musicJson } from './data/music'
-import { listFilter } from './utils/listfilter'
+import { musicJson } from '../data/music'
+import { listFilter } from '../utils/listfilter'
 
 
 export default function MusicLinks(props) {

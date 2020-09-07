@@ -3,8 +3,8 @@ import ReactPlayer from 'react-player'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
-import { videoJson } from './data/videos'
-import { listFilter } from './utils/listfilter'
+import { videoJson } from '../data/videos'
+import { listFilter } from '../utils/listfilter'
 
 
 export default function VideoLinks(props) {

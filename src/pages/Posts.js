@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { Button, Row, Col } from 'react-bootstrap'
 
 
-import LoadingIndicator from './LoadingIndicator'
-import { WP_POSTS_URL } from './constants'
+import LoadingIndicator from '../components/LoadingIndicator'
+import { WP_POSTS_URL } from '../constants'
 
+const cache = {}
 export default function Posts() {
 
     const handleOpen = (id) => {
@@ -21,6 +22,11 @@ export default function Posts() {
     // REST API effects
     useEffect(() => {
         if (isLoading) return
+        if (cache[pageNumber]) {
+            console.log('cache hit!!')
+            setPosts(cache[pageNumber])
+            return
+        }
         // make REST request
         const url = WP_POSTS_URL + pageNumber*1
         setIsLoading(true)
@@ -36,6 +42,7 @@ export default function Posts() {
             }
         }).then(json => {
             const updatedPosts = [...posts, ...json]
+            cache[pageNumber] = updatedPosts
             setPosts(updatedPosts)
         }).catch(err => {
             console.log(err)
@@ -78,6 +85,8 @@ export default function Posts() {
                         )})}
                 </Row>    
             </div>
+            {isLoading &&  <LoadingIndicator/>}
+               
             {renderPagination()}
         </div>
     )

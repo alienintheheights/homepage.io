@@ -1,5 +1,5 @@
 import React, {  useEffect }  from 'react'
-import VideoLinks from './VideoLinks'
+import VideoLinks from '../components/VideoLinks'
 
 export default function Video() {
     useEffect(() => {

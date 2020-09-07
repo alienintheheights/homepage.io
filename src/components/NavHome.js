@@ -9,7 +9,7 @@ export default function NavHome() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <span>
                     <Nav className="mr-auto">
-                        <Nav.Link className='fauxmat-navspacing' href="/">Home</Nav.Link>
+                        <Nav.Link className='fauxmat-navspacing' href="/#">Home</Nav.Link>
                         <Nav.Link className='fauxmat-navspacing' href="#music">Music</Nav.Link> 
                         <Nav.Link className='fauxmat-navspacing' href="#videos">Videos</Nav.Link>
                         <Nav.Link className='fauxmat-navspacing' href="#posts">Blog</Nav.Link>

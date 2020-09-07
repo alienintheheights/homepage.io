@@ -1,6 +1,6 @@
 import React, {  useEffect }  from 'react'
-import Bandcamp from './Bandcamp'
-import MusicLinks from './MusicLinks'
+import Bandcamp from '../components/Bandcamp'
+import MusicLinks from '../components/MusicLinks'
 
 export default function Music() {
     useEffect(() => {
