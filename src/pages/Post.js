@@ -15,10 +15,13 @@ export default function Post(props) {
     const [comments, setComments] = useState([])
    
     const [isLoading, setIsLoading] = useState(false)
- 
+    
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     useEffect(() => {
         if (cache[postId]) {
-            console.log('cache hit!!')
             setPost(cache[postId])
             return
         }

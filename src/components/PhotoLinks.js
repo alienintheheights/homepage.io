@@ -45,7 +45,6 @@ export default function PhotoLinks(props) {
     }
 
     let toggle = 0
-    console.log(width)
     return (
         <div>
             {linkJson &&

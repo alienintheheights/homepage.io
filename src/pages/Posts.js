@@ -23,7 +23,6 @@ export default function Posts() {
     useEffect(() => {
         if (isLoading) return
         if (cache[pageNumber]) {
-            console.log('cache hit!!')
             setPosts(cache[pageNumber])
             return
         }
