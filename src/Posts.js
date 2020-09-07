@@ -1,27 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Button, Row, Col } from 'react-bootstrap'
-//import { debounce } from 'lodash'
+
 
 import LoadingIndicator from './LoadingIndicator'
-import { WP_POSTS_URL, WP_PER_PAGE } from './constants'
+import { WP_POSTS_URL } from './constants'
 
-
-// cache REST
-const cache = []
 export default function Posts() {
-
-    const postRef = useRef(null)
-    const scrollToTop = () => {
-        postRef.current.scrollIntoView({
-            behavior : 'smooth'
-        })
-    }
 
     const handleOpen = (id) => {
         window.location='/#/post/' + id
     }
-
 
     // Post REST
     const [posts, setPosts] = useState([])
@@ -29,24 +18,9 @@ export default function Posts() {
     const [noMoreData, setNoMoreData] = useState(false)
     const [pageNumber, setPageNumber] = useState(1)
   
-    /**
-     * We're doing a bottomless list so we need to keep track of all requests.
-     * 
-     * @param {*} currentPage 
-     * @param {*} json 
-     */
-    const getSumOfPosts = (currentPage, json) => {
-        if (json) cache.push(...json)
-        return cache.filter((row, index) => (index < currentPage * WP_PER_PAGE))
-    }
-    
     // REST API effects
     useEffect(() => {
-        // check cache
-        if (cache.length >= pageNumber * WP_PER_PAGE) {
-            setPosts(getSumOfPosts(pageNumber))
-            return
-        }
+        if (isLoading) return
         // make REST request
         const url = WP_POSTS_URL + pageNumber*1
         setIsLoading(true)
@@ -61,7 +35,8 @@ export default function Posts() {
                 }
             }
         }).then(json => {
-            setPosts(getSumOfPosts(pageNumber, json))
+            const updatedPosts = [...posts, ...json]
+            setPosts(updatedPosts)
         }).catch(err => {
             console.log(err)
         }).finally(() => {
@@ -69,23 +44,7 @@ export default function Posts() {
         })
     }, [pageNumber])
   
-    /**
-    // scrolling effects
-    useEffect(() => {
-        const container = document.querySelector('#fauxmat-postgrid')  
-        if (container) {
-            // Bind to the end of scroll event
-            container.addEventListener('ps-y-reach-end', debounce(value =>  {
-                const total = posts.length
-                console.log('Do I need more data?', isLoading, posts, cache)
-                if (!total || isLoading || noMoreData || total === cache.length  ) return
-                console.log('***I need more data!', posts, cache)
-                //setPageNumber(pageNumber*1 + 1)
-            }), 2500)
-        }
-    }, [posts, pageNumber, isLoading, noMoreData])
-    */
-
+    
     const renderPagination = () => {
         return (
             <div className='fauxmat-pagination-buttons'>
@@ -95,7 +54,7 @@ export default function Posts() {
     }
 
     return (
-        <div ref={postRef} id='fauxmat-postgrid' className='fauxmat'>
+        <div id='fauxmat-postgrid' className='fauxmat'>
             <div>
                 {isLoading &&  <LoadingIndicator/>}
                 <Row>
