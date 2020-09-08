@@ -3,7 +3,6 @@ import React from 'react'
 import Welcome from '../components/Welcome'
 import PhotoLinks from '../components/PhotoLinks'
 import MusicLinks from '../components/MusicLinks'
-import VideoLinks from '../components/VideoLinks'
 import Bandcamp from '../components/Bandcamp'
 import About from '../components/About'
 

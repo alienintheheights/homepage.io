@@ -4,7 +4,7 @@ import {Container} from 'react-bootstrap'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import NavHome from './components/NavHome'
-import Posts from './pages/Posts'
+import Blog from './pages/Blog'
 import Post from './pages/Post'
 import Etc from './pages/Etc'
 import Music from './pages/Music'
@@ -21,7 +21,7 @@ export default function Main() {
                 <HashRouter basename="/">
                     <Switch>
                         <Route exact path='/' component={Home}/>
-                        <Route path='/blog/:lp?' component={Posts}/>
+                        <Route path='/blog/:lp?' component={Blog}/>
                         <Route exact path='/home' component={Home}/>
                         <Route path='/post/:id/:fp?' component={Post}/> 
                         <Route exact path='/etc' component={Etc}/> 

@@ -12,6 +12,7 @@ export default function Post(props) {
     const isUrl = props.match  && props.match.params && props.match.params.id 
     const postId = isUrl?  props.match.params.id : props.id 
     const [post, setPost] = useState([])
+    const [postReady, setPostReady] = useState(false)
     const [comments, setComments] = useState([])
    
     const [isLoading, setIsLoading] = useState(false)
@@ -26,17 +27,19 @@ export default function Post(props) {
             return
         }
         setIsLoading(true)
-        fetch(WP_POST_URL + postId + '?_embed')
+        fetch(WP_POST_URL + postId + '?_embed=1')
           .then(res => res.json())
           .then(json => {
               cache[postId] = json
               setPost(json)
               setIsLoading(false)
+              setPostReady(true)
           })
     }, [postId])
 
     // comments
     useEffect(() => {
+        if (!postReady) return
         setIsLoading(true)
         fetch(WP_COMMENTS_URL + postId)
           .then(res => res.json())
@@ -45,7 +48,7 @@ export default function Post(props) {
               setComments(commentStream)
               setIsLoading(false)
           })
-    }, [postId])
+    }, [postReady])
 
     const commentRef = useRef(null)
     const scrollToBottom = () => {

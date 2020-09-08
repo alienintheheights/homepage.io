@@ -3,7 +3,7 @@ export const MOBILE_MAX = 700
 // filter[orderby]=date&order=desc&
 export const WP_PER_PAGE = 4
 export const WP_BASE_URL = '/press/wp-json/wp/v2'
-export const WP_POSTS_URL =  WP_BASE_URL + '/posts?_embed&per_page=' + WP_PER_PAGE + '&page='
+export const WP_POSTS_URL =  WP_BASE_URL + '/posts?_embed=1&per_page=' + WP_PER_PAGE + '&page='
 export const WP_POST_URL =  WP_BASE_URL + '/posts/'
 export const WP_COMMENTS_URL = WP_BASE_URL + '/comments?per_page=100&post='
 
