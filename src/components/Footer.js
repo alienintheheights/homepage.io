@@ -8,7 +8,7 @@ export default function Footer() {
                 <Social/>
             </span>
             <span className='fauxmat-disclaimer'>
-                Written from scratch in ReactJS by me. Copyright 2020. 
+                Written from <a target='_new' href='https://github.com/alienintheheights/homepage.io'>scratch in ReactJS</a> by me. Copyright 2020. 
             </span>
         </div>
     )

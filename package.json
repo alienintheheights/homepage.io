@@ -2,6 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://andrewlienhard.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
